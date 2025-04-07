@@ -1,0 +1,110 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36" version="25.0.3">
+  <diagram name="Seite-1" id="Re1bERAIJ-t_7qZEAxXh">
+    <mxGraphModel dx="1147" dy="664" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="_nVACLKt_RVk7SZfxOdw-1" value="Rohdaten (Longitude, Lattitude)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="30" y="120" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="_nVACLKt_RVk7SZfxOdw-2" value="Beschleunigung (a_x, a_y, a_z)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="720" y="120" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="_nVACLKt_RVk7SZfxOdw-3" value="Wegrichtung (x,y, z)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="380" y="120" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="_nVACLKt_RVk7SZfxOdw-9" value="" style="endArrow=classic;html=1;rounded=0;fontSize=12;startSize=8;endSize=8;curved=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="_nVACLKt_RVk7SZfxOdw-1" target="_nVACLKt_RVk7SZfxOdw-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="205" y="340" as="sourcePoint" />
+            <mxPoint x="595" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_nVACLKt_RVk7SZfxOdw-10" value="Richtungsdifferenz in 3 Dimensiosnen" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;" vertex="1" connectable="0" parent="_nVACLKt_RVk7SZfxOdw-9">
+          <mxGeometry x="0.2923" y="-2" relative="1" as="geometry">
+            <mxPoint x="-42" y="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_nVACLKt_RVk7SZfxOdw-11" value="gefilterte Beschleunigung" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1070" y="120" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="_nVACLKt_RVk7SZfxOdw-12" value="" style="endArrow=classic;html=1;rounded=0;fontSize=12;startSize=8;endSize=8;curved=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="_nVACLKt_RVk7SZfxOdw-2" target="_nVACLKt_RVk7SZfxOdw-11">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="450" y="410" as="sourcePoint" />
+            <mxPoint x="500" y="360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_nVACLKt_RVk7SZfxOdw-13" value="Glättung mit Savitzky-Golay" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;" vertex="1" connectable="0" parent="_nVACLKt_RVk7SZfxOdw-12">
+          <mxGeometry x="0.02" y="-4" relative="1" as="geometry">
+            <mxPoint x="-3" y="-14" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_nVACLKt_RVk7SZfxOdw-16" value="" style="endArrow=classic;html=1;rounded=0;fontSize=12;startSize=8;endSize=8;curved=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="_nVACLKt_RVk7SZfxOdw-3" target="_nVACLKt_RVk7SZfxOdw-2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="414" y="350" as="sourcePoint" />
+            <mxPoint x="674" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_nVACLKt_RVk7SZfxOdw-17" value="2-Fache Ableitung" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;" vertex="1" connectable="0" parent="_nVACLKt_RVk7SZfxOdw-16">
+          <mxGeometry x="0.02" y="-4" relative="1" as="geometry">
+            <mxPoint x="-3" y="-14" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_nVACLKt_RVk7SZfxOdw-18" value="Strecke ohne Innerbody-Bewegung&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="380" y="220" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="_nVACLKt_RVk7SZfxOdw-19" value="" style="endArrow=classic;html=1;rounded=0;fontSize=12;startSize=8;endSize=8;curved=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="_nVACLKt_RVk7SZfxOdw-3" target="_nVACLKt_RVk7SZfxOdw-18">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="140" y="160" as="sourcePoint" />
+            <mxPoint x="390" y="160" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_nVACLKt_RVk7SZfxOdw-22" value="Glättung mit Savitzky-Golay" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;" vertex="1" connectable="0" parent="_nVACLKt_RVk7SZfxOdw-19">
+          <mxGeometry x="-0.1524" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_nVACLKt_RVk7SZfxOdw-23" value="Winkel Phi für jeden Datenpunkt" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1070" y="220" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="_nVACLKt_RVk7SZfxOdw-24" value="" style="endArrow=classic;html=1;rounded=0;fontSize=12;startSize=8;endSize=8;curved=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="_nVACLKt_RVk7SZfxOdw-18" target="_nVACLKt_RVk7SZfxOdw-23">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="450" y="190" as="sourcePoint" />
+            <mxPoint x="450" y="260" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_nVACLKt_RVk7SZfxOdw-25" value="Bestimmung Winkel Phi" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;" vertex="1" connectable="0" parent="_nVACLKt_RVk7SZfxOdw-24">
+          <mxGeometry x="-0.1524" y="2" relative="1" as="geometry">
+            <mxPoint x="7" y="-8" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_nVACLKt_RVk7SZfxOdw-26" value="" style="endArrow=classic;html=1;rounded=0;fontSize=12;startSize=8;endSize=8;curved=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="_nVACLKt_RVk7SZfxOdw-23" target="_nVACLKt_RVk7SZfxOdw-11">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="890" y="360" as="sourcePoint" />
+            <mxPoint x="940" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_nVACLKt_RVk7SZfxOdw-27" value="Winkel an Beschleunigung ansetzen" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;" vertex="1" connectable="0" parent="_nVACLKt_RVk7SZfxOdw-26">
+          <mxGeometry x="-0.0939" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_nVACLKt_RVk7SZfxOdw-28" value="Zyklen definieren (Zeit)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1340" y="120" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="_nVACLKt_RVk7SZfxOdw-29" value="" style="endArrow=classic;html=1;rounded=0;fontSize=12;startSize=8;endSize=8;curved=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="_nVACLKt_RVk7SZfxOdw-11" target="_nVACLKt_RVk7SZfxOdw-28">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="960" y="530" as="sourcePoint" />
+            <mxPoint x="1010" y="480" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_nVACLKt_RVk7SZfxOdw-30" value="lokales Maxima" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;" vertex="1" connectable="0" parent="_nVACLKt_RVk7SZfxOdw-29">
+          <mxGeometry x="0.3692" y="-1" relative="1" as="geometry">
+            <mxPoint x="-29" y="-11" as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
